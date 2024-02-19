@@ -3,7 +3,7 @@
 function displayHideParragraph() {
     let parrafo = document.getElementById("texto");
     if (parrafo.style.visibility == 'hidden'){
-        parrafo.style.visibility = 'visible';
+        parrafo.style.visibility == 'visible';
 } else {
     parrafo.style.visibility = 'hidden';
 }
@@ -13,14 +13,18 @@ function displayHideParragraph() {
 
   //Ejercicio 2: Hacer que con onmouseover y onmouseout, se muestre/esconda el título de una foto cuando pases el raton sobre dicha foto
 
-function hideTitle() {
-   document.getElementById("titulo").style.visibility == 'hidden';
-}
-function displayTitle() {
-   document.getElementById("titulo").style.visibility == 'visible';
-}
 
-  document.getElementById("arbol").addEventListener("onmouseover",hideTitle);
-  document.getElementById("arbol").addEventListener("onmouseout",displayTitle);
+document.getElementById("arbol").onmouseover = function() {mouseOver()};
+
+document.getElementById("arbol").onmouseout = function() {mouseOut()};
+
+function mouseOut() {
+  document.getElementById("titulo").style.visibility = 'visible';
+} 
+function mouseOver() {
+    document.getElementById("titulo").style.visibility = 'hidden';
+ }
+
+  //document.getElementsById("arbol").addEventListener("onmouseout",displayTitle);
 
 
